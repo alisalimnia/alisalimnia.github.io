@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-        domains: ['peymanath.ir', 'peymannaderi.ir'],
+        domains: ['alisalimnia.github.io'],
         unoptimized: true,
     },
 };
