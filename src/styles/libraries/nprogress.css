@@ -1,0 +1,9 @@
+@import 'nprogress/nprogress.css';
+
+#nprogress .bar {
+    background-color: var(--primary);
+    z-index: 9999999999999;
+}
+#nprogress .peg {
+    display: none;
+}
