@@ -571,6 +571,20 @@ const NEXT_DYNAMIC_NO_SSR_CODE = "DYNAMIC_SERVER_USAGE"; //# sourceMappingURL=no
 module.exports = __webpack_require__(1414)
 
 
+/***/ }),
+
+/***/ 167:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+exports._ = exports._interop_require_default = _interop_require_default;
+function _interop_require_default(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
+
+
 /***/ })
 
 };

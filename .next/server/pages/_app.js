@@ -20,9 +20,6 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime = __webpack_require__(5893);
 // EXTERNAL MODULE: ./src/styles/globals.css
 var globals = __webpack_require__(108);
-// EXTERNAL MODULE: ./node_modules/next/image.js
-var next_image = __webpack_require__(5675);
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: ./node_modules/next/link.js
 var next_link = __webpack_require__(1664);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
@@ -33,7 +30,6 @@ var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: external "react-huge-icons/outline"
 var outline_ = __webpack_require__(9986);
 ;// CONCATENATED MODULE: ./src/layout/Header.tsx
-
 
 
 
@@ -127,22 +123,12 @@ function Header() {
                         })
                     })
                 }),
-                /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                /*#__PURE__*/ jsx_runtime.jsx("div", {
                     className: "flex items-center gap-3",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime.jsx("p", {
-                            className: "hidden md:flex text-lg lg:text-xl",
-                            children: "Ali Salimnia"
-                        }),
-                        /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
-                            width: "64",
-                            height: "24",
-                            src: "/assets/images/color-logo.png",
-                            alt: "Ali Salimnia Logo",
-                            title: 'لوگو علی سلیم نیا، حروف اول اسم "پیمان" با کد رنگی #ff6d00',
-                            className: "w-12"
-                        })
-                    ]
+                    children: /*#__PURE__*/ jsx_runtime.jsx("p", {
+                        className: "hidden md:flex text-lg lg:text-xl",
+                        children: "Ali Salimnia"
+                    })
                 })
             ]
         })
@@ -214,7 +200,7 @@ function App({ Component , pageProps  }) {
                     }),
                     /*#__PURE__*/ jsx_runtime.jsx("link", {
                         rel: "shortcut icon",
-                        href: "/assets/images/favicon.png"
+                        href: "/assets/images/bell.svg"
                     }),
                     /*#__PURE__*/ jsx_runtime.jsx("meta", {
                         name: "theme-color",
@@ -299,22 +285,6 @@ function App({ Component , pageProps  }) {
 
 /***/ }),
 
-/***/ 3918:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/amp-context.js");
-
-/***/ }),
-
-/***/ 5732:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/amp-mode.js");
-
-/***/ }),
-
 /***/ 3280:
 /***/ ((module) => {
 
@@ -323,51 +293,11 @@ module.exports = require("next/dist/shared/lib/app-router-context.js");
 
 /***/ }),
 
-/***/ 2796:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/head-manager-context.js");
-
-/***/ }),
-
 /***/ 9274:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/hooks-client-context.js");
-
-/***/ }),
-
-/***/ 4486:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/image-blur-svg.js");
-
-/***/ }),
-
-/***/ 744:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/image-config-context.js");
-
-/***/ }),
-
-/***/ 5843:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/image-config.js");
-
-/***/ }),
-
-/***/ 9552:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/image-loader");
 
 /***/ }),
 
@@ -435,27 +365,11 @@ module.exports = require("next/dist/shared/lib/server-inserted-html.js");
 
 /***/ }),
 
-/***/ 2470:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/side-effect.js");
-
-/***/ }),
-
 /***/ 9232:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/utils.js");
-
-/***/ }),
-
-/***/ 618:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/utils/warn-once.js");
 
 /***/ }),
 
@@ -490,7 +404,7 @@ module.exports = require("react-huge-icons/outline");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [636,893,675,664,332], () => (__webpack_exec__(7644)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,664,332], () => (__webpack_exec__(7644)));
 module.exports = __webpack_exports__;
 
 })();

@@ -96,14 +96,14 @@ export default function Header() {
                 </div>
                 <div className='flex items-center gap-3'>
                     <p className='hidden md:flex text-lg lg:text-xl'>Ali Salimnia</p>
-                    <Image
+                    {/* <Image
                         width='64'
                         height='24'
                         src='/assets/images/color-logo.png'
                         alt='Ali Salimnia Logo'
                         title='لوگو علی سلیم نیا، حروف اول اسم "پیمان" با کد رنگی #ff6d00'
                         className='w-12'
-                    />
+                    /> */}
                 </div>
             </div>
         </div>

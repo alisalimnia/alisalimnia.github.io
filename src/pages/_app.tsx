@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 />
                 <link
                     rel='shortcut icon'
-                    href='/assets/images/favicon.png'
+                    href='/assets/images/bell.svg'
                 />
                 <meta
                     name='theme-color'
