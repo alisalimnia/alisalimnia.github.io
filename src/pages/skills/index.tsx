@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import { Layers } from 'react-huge-icons/outline';
 import SingleSkill from 'DOMAIN/SkillsSlider/SingleSkill';
 import GetSkillsRequest from 'SERVICES/skills/GetSkills';
@@ -6,11 +5,26 @@ import { SkillsResponseDataItem } from 'TYPES/pages/Pages';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
-interface SkillsSliderInterface {
-    skillsList: SkillsResponseDataItem[] | undefined;
-}
+export default function Skills() {
+    const [skillsList, setSkillsList] = useState<SkillsResponseDataItem[] | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
 
-export default function Skills({ skillsList }: SkillsSliderInterface) {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await GetSkillsRequest();
+                setSkillsList(data?.data || []);
+            } catch (error) {
+                console.error('خطا در دریافت مهارت‌ها:', error);
+                setSkillsList([]);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <>
             <Head>
@@ -41,13 +55,16 @@ export default function Skills({ skillsList }: SkillsSliderInterface) {
                     content='مهارت های علی سلیم نیا، توسعه دهنده فرانت اند دور کار'
                 />
             </Head>
+
             <div className='container flex flex-col gap-10'>
                 <div className='flex items-center gap-3'>
                     <Layers className='w-10 h-10 text-primary' />
                     <h1 className='font-semibold text-xl'>مهارت ها</h1>
                 </div>
 
-                {!!skillsList && skillsList.length > 0 ? (
+                {loading ? (
+                    <div className='text-center'>در حال بارگذاری...</div>
+                ) : skillsList && skillsList.length > 0 ? (
                     <div className='flex flex-wrap'>
                         {skillsList.map(({ id, attributes }: SkillsResponseDataItem) => (
                             <div
@@ -67,15 +84,4 @@ export default function Skills({ skillsList }: SkillsSliderInterface) {
             </div>
         </>
     );
-}
-
-export async function getStaticProps() {
-    const data = await GetSkillsRequest();
-
-    return {
-        props: {
-            skillsList: data?.data || [],
-        },
-        revalidate: 3600,
-    };
 }
